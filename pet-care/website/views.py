@@ -46,7 +46,7 @@ def contact_us(request):
 
 
 def gallery(request):
-    images = Image.objects.all()  # Fetch all images from the database
+    images = Image.objects.all()  
     return render(request, "website/gallery.html", {'images': images})
 
 

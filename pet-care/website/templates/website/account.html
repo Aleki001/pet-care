@@ -42,6 +42,7 @@
             <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-change-password"><i class="bi bi-pencil-square" style="font-size: 1.3em;margin-right: 7px;"></i>Change password</a>
             <a class="list-group-item list-group-item-action" data-toggle="list" href="#add-news"><i class="bi bi-newspaper" style="font-size: 1.3em;margin-right: 7px;"></i>Add News</a>
             <a class="list-group-item list-group-item-action" data-toggle="list" href="#add-gallery"><i class="bi bi-card-image" style="font-size: 1.3em;margin-right: 7px;"></i>Add to Gallery</a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#add-pet"><i class="bi bi-emoji-smile" style="font-size: 1.3em;margin-right: 7px;"></i>Add a Pet</a>
           </div>
         </div>
         <div class="col-md-9">
@@ -159,6 +160,40 @@
                 <div class="text-dark small mt-1">Allowed JPG, GIF or PNG. Max size of 800K</div>
               </div>
               <button type="submit" class="btn btn-primary mt-3">Post pic</button>
+              </form>
+            </div>
+
+            <div class="tab-pane fade bordered" id="add-pet">
+              <h2>Add a Pet</h2>
+              <form action="{% url 'add_picture' %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+              <div class="media-body ml-4">
+                <label class="btn btn-outline-primary mt-2">
+                  Upload Pet photo
+                  <input type="file" class="account-settings-fileinput" name="image" required>
+                </label> &nbsp;
+
+                <div class="text-dark small mt-1">Allowed JPG, GIF or PNG. Max size of 800K</div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Name</label>
+                <input type="text" class="form-control" name="name">
+              </div>
+          
+              <div class="form-group">
+                <label class="form-label">Gender Age</label>
+                <input type="text" class="form-control" name="gender_age">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Hair Type</label>
+                <input type="text" class="form-control" name="hair_type">
+              </div>
+          
+              <div class="form-group">
+                <label class="form-label">Origin</label>
+                <input type="text" class="form-control" name="origin">
+              </div>
+              <button type="submit" class="btn btn-primary mt-3">Post Pet</button>
               </form>
             </div>
           </div>
