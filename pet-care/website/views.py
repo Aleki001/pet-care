@@ -134,7 +134,7 @@ def change_password_view(request):
         form = PasswordChangeForm(request.user)
     return render(request, 'website/account.html', {'form': form})
 
-
+@login_required
 def add_picture_to_gallery(request):
     if request.method == 'POST':
         form = ImageForm(request.POST, request.FILES)
@@ -147,3 +147,6 @@ def add_picture_to_gallery(request):
     else:
         form = ImageForm()
     return render(request, 'website/account.html', {'form': form})
+
+def pets(request):
+    return render(request, 'website/pets.html')

@@ -1,0 +1,57 @@
+{% extends "website/base.html" %}
+
+{% block content %}
+<style>
+    .card-img-top {
+        height: 200px;
+        object-fit: cover;
+        border-radius: 0.5rem; /* Ensures the corners are rounded */
+    }
+    .card {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle box shadow */
+    }
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-title {
+        text-align: center;
+    }
+    .card-text {
+        text-align: left;
+        width: 100%; /* Ensures the text takes full width of the card body */
+    }
+    .card-body ul {
+        padding-left: 20px; /* Adds some left padding to the list for better alignment */
+        text-align: left;
+        width: 100%;
+    }
+</style>
+    <!-- Pet Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <p class="section-title bg-white text-center text-primary px-3">Pets</p>
+                <h3 class="mb-5">We've These Great Pets for You, Ready to Adopt</h3>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300" class="card-img-top rounded" alt="Card image">
+                        <div class="card-body">
+                            <h5 class="card-title">Bosco</h5>
+                            <ul>
+                                <li>ssssa dsdsd dsds</li>
+                                <li>sasas</li>
+                                <li>sasas</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary mt-2">Adopt Me</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Pet End -->
+{% endblock %}
