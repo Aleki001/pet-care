@@ -11,5 +11,4 @@ urlpatterns = [
     path('logout/', views.custom_logout, name='logout'),
     path('change-password/', views.change_password_view, name='change_password'),
     path('add-picture/', views.add_picture_to_gallery, name='add_picture'),
-    path('pet/', views.pets, name='pets'),
 ]

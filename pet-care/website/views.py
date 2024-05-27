@@ -148,5 +148,3 @@ def add_picture_to_gallery(request):
         form = ImageForm()
     return render(request, 'website/account.html', {'form': form})
 
-def pets(request):
-    return render(request, 'website/pets.html')
