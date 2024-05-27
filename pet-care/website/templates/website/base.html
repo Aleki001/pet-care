@@ -5,13 +5,12 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Mkulima Bora</title>
+    <title>Pet Care</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,7 +33,7 @@
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
     <link href="{% static 'css/account.css' %}" rel="stylesheet">
 
-    <!-- Option 1: Include in HTML -->
+    <!-- Bootstrap icons -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 </head>
 
@@ -80,8 +79,9 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="/" class="nav-item nav-link">Home</a>
+                <a href="#" class="nav-item nav-link">Pets</a>
                 <a href="/gallery/" class="nav-item nav-link">Gallery</a>
-                <a href="/mkulima-news/" class="nav-item nav-link">Blog</a>
+                <a href="/blog/" class="nav-item nav-link">Blog</a>
                 <a href="/contact/" class="nav-item nav-link">Contact</a>
                 {% if user.is_authenticated %}
                 <a href="{% url 'account' %}" class="nav-item nav-link">Account</a>
@@ -134,7 +134,7 @@
                     <h5 class="text-white mb-4">Our Office</h5>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>P.O. BOX 24. Runyenjes</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+254 712 343 454</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>mkulimabora@gmail.com</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>petcare@gmail.com</p>
                     <div class="d-flex pt-3">
                         <a class="btn btn-square btn-secondary rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-square btn-secondary rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
@@ -180,7 +180,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="fw-semi-bold" href="#">MkulimaBora</a>, All Right Reserved.
+                    &copy; <a class="fw-semi-bold" href="#">PetCare</a>, All Right Reserved.
                 </div>
                 <div class="col-md-6 text-center text-md-end copyright">
                     Designed By <a class="fw-semi-bold" href="https://github.com/aleki001/">Alex Kinyua</a>
