@@ -1,7 +1,7 @@
 from django import forms
-from .models import pets
+from .models import Pets
 
 class PetsForm(forms.ModelForm):
     class Meta:
-        model = pets
+        model = Pets
         fields = ['photo', 'name', 'gender_age', 'hair_type', 'origin']

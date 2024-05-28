@@ -1,6 +1,6 @@
 from django.db import models
 
-class pets(models.Model):
+class Pets(models.Model):
     name = models.CharField(max_length=100)
     gender_age = models.CharField(max_length=300)
     hair_type = models.CharField(max_length=300)
