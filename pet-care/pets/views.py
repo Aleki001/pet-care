@@ -20,22 +20,6 @@ def add_pets(request):
 
 
 
-# def delete_pet(request):
-#     if request.method == 'POST':
-#         pet_id = request.POST.get('pet_id')
-#         if pet_id:
-#             try:
-#                 pet = get_object_or_404(Pets, pk=pet_id)
-#                 pet.delete()
-#                 return redirect('pets')
-#             except Exception as e:
-#                 print(f"Error deleting pet: {e}")
-#         else:
-#             print("Pet ID not provided")
-#     else:
-#         print("Request method is not POST")
-#     return redirect('pets')
-
 def delete_pet(request, pk):
     pet = get_object_or_404(Pets, pk=pk)
     pet.delete()

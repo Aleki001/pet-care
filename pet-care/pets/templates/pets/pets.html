@@ -47,10 +47,12 @@
                                 <li>{{pet.origin}}</li>
                             </ul>
                             <a href="#" class="btn btn-primary mt-2">Adopt Me</a>
+                            {% if user.is_authenticated %}
                             <form method="post" action="{% url 'delete_pet' pk=pet.id %}" onsubmit="return confirm('Are you sure you want to delete this pet?');">
                                 {% csrf_token %}
                                 <button type="submit" class="btn btn-danger mt-2">Delete</button>
                             </form>
+                            {% endif %}
                         </div>
                     </div>
                 </div>

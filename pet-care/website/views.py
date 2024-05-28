@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import SubscribedUsers
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
@@ -147,4 +147,10 @@ def add_picture_to_gallery(request):
     else:
         form = ImageForm()
     return render(request, 'website/account.html', {'form': form})
+
+
+def delete_picture_from_gallery(request, pk):
+    pic = get_object_or_404(Image, pk=pk)
+    pic.delete()
+    return redirect('gallery')
 
