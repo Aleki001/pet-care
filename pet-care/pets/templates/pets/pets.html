@@ -46,7 +46,7 @@
                                 <li>{{pet.hair_type}}</li>
                                 <li>{{pet.origin}}</li>
                             </ul>
-                            <a href="#" class="btn btn-primary mt-2">Adopt Me</a>
+                            <a href="{% url 'contactus' %}" class="btn btn-primary mt-2">Adopt Me</a>
                             {% if user.is_authenticated %}
                             <form method="post" action="{% url 'delete_pet' pk=pet.id %}" onsubmit="return confirm('Are you sure you want to delete this pet?');">
                                 {% csrf_token %}

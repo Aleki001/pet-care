@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import PetsForm
 from .models import Pets
+from django.contrib import messages
 
 def pets(request):
     pets = Pets.objects.all() 
@@ -12,6 +13,7 @@ def add_pets(request):
         form = PetsForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
+            messages.success(request, 'Pet added to gallery successfully.')
             return redirect('account')
     else:
         form = PetsForm()
