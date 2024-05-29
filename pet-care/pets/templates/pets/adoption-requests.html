@@ -1,0 +1,40 @@
+{% extends "website/base.html" %}
+
+{% block content %}
+
+
+<div class="container" id="example">
+    <a href="{% url 'account' %}" class="btn btn-primary mb-3"><< Back</a>
+    <h3>These are requests for adoption</h3>
+    <table class="table table-bordered mt-5">
+    <thead>
+        <tr>
+            <th>Pet Name</th>
+            <th>Adopter Name</th>
+            <th>Adopter Email</th>
+            <th>Adopter Address</th>
+            <th>Adopter Phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for request in requests %}
+            <tr>
+                <td>{{ request.pet_name }}</td>
+                <td>{{ request.name }}</td>
+                <td>{{ request.email }}</td>
+                <td>{{ request.address }}</td>
+                <td>{{ request.phone }} </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+</div>
+
+
+{% endblock %}
+<script>
+    new DataTable('#example');
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
+<script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.js"></script>

@@ -38,6 +38,7 @@
         <div class="col-md-3 pt-0">
           <div class="list-group list-group-flush account-settings-links">
             <a class="list-group-item list-group-item-action" data-toggle="list" href="#"><i class="bi bi-speedometer2" style="font-size: 1.3em;margin-right: 7px;"></i>Petcare Dashboard</a>
+            <a class="list-group-item " href="{% url 'adoption_requests_list' %}"><i class="bi bi-clipboard" style="font-size: 1.3em;margin-right: 7px;"></i>Manage Requests</a>
             <a class="list-group-item list-group-item-action active" data-toggle="list" href="#account-general"><i class="bi bi-person-circle" style="font-size: 1.3em;margin-right: 7px;"></i>Profile</a>
             <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-change-password"><i class="bi bi-pencil-square" style="font-size: 1.3em;margin-right: 7px;"></i>Change password</a>
             <a class="list-group-item list-group-item-action" data-toggle="list" href="#add-news"><i class="bi bi-newspaper" style="font-size: 1.3em;margin-right: 7px;"></i>Add News</a>
@@ -196,6 +197,8 @@
               <button type="submit" class="btn btn-primary my-3">Post Pet</button>
               </form>
             </div>
+
+
           </div>
         </div>
       </div>

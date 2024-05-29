@@ -7,6 +7,7 @@
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
+        <input type="hidden" name="pet_name" value="{{ pet.name }}">
         <button type="submit" class="btn btn-primary">Submit Adoption Request</button>
     </form>
 </div>
