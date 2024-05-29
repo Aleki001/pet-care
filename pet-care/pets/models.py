@@ -6,3 +6,6 @@ class Pets(models.Model):
     hair_type = models.CharField(max_length=300)
     origin = models.CharField(max_length=300)
     photo = models.ImageField(upload_to='pets/')
+
+    def __str__(self):
+        return self.name

@@ -1,8 +1,77 @@
 {% extends "website/base.html" %}
 {% load static %}
 {% block content %}
+<style>
+    .carousel-nav-icon {
+   height: 48px;
+   width: 48px;
+}
+.carousel-item {
+   .col, .col-sm, .col-md {
+      margin: 8px;
+      height: 300px;
+      background-size: cover;
+      background-position: center center;
+   }
+}
 
+</style>
 
+<div class="my-5 text-center container">
+    <div class="row mb-2">
+       <div class="col text-center">
+          <p class="lead">Donations and pricing are coming soon!!!</a></p>
+       </div>
+    </div>
+    <div class="row d-flex align-items-center">
+       <div class="col-1 d-flex align-items-center justify-content-center">
+          <a href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+             <div class="carousel-nav-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink">
+                   <path d="m88.6,121.3c0.8,0.8 1.8,1.2 2.9,1.2s2.1-0.4 2.9-1.2c1.6-1.6 1.6-4.2 0-5.8l-51-51 51-51c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-54,53.9c-1.6,1.6-1.6,4.2 0,5.8l54,53.9z"/>
+                </svg>
+             </div>
+          </a>
+       </div>
+       <div class="col-10">
+          <!--Start carousel-->
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+ 
+             <div class="carousel-inner">
+                <div class="carousel-item active">
+                   <div class="row">
+                      <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/flexfun04.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center">
+                      </div>
+                      <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/flexfun02.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center">
+                      </div>
+                      <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/flexfun05.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center" class="col-12 col-md d-flex align-items-center justify-content-center">
+                      </div>
+                   </div>
+                </div>
+                <div class="carousel-item">
+                   <div class="row">
+                      <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/flexfun01.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center">
+                      </div>
+                      <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/flexfun03.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center">
+                      </div>
+                      <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/flexfun06.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center" class="col-12 col-md d-flex align-items-center justify-content-center">
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+          <!--End carousel-->
+       </div>
+       <div class="col-1 d-flex align-items-center justify-content-center"><a  href="#carouselExampleIndicators" data-bs-slide="next">
+          <div class="carousel-nav-icon">
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z"/>
+             </svg>
+          </div>
+          </a>
+       </div>
+    </div>
+ </div>
 
     <!-- About Start -->
     <div class="container-xxl py-5">
@@ -12,18 +81,18 @@
                     <div class="row g-2">
                         <div class="col-6 position-relative wow fadeIn" data-wow-delay="0.7s">
                             <div class="about-experience bg-secondary rounded">
-                                <h1 class="display-1 mb-0">11</h1>
+                                <h1 class="display-1 mb-0">7</h1>
                                 <small class="fs-5 fw-bold">Years Experience</small>
                             </div>
                         </div>
                         <div class="col-6 wow fadeIn" data-wow-delay="0.1s">
-                            <img class="img-fluid rounded" src="{% static 'img/farmers-training.jpeg' %}">
+                            <img class="img-fluid rounded" src="{% static 'img/cat1.jpeg' %}">
                         </div>
                         <div class="col-6 wow fadeIn" data-wow-delay="0.3s">
-                            <img class="img-fluid rounded" src="{% static 'img/farmers-training.jpg' %}">
+                            <img class="img-fluid rounded" src="{% static 'img/vet2.jpeg' %}">
                         </div>
                         <div class="col-6 wow fadeIn" data-wow-delay="0.5s">
-                            <img class="img-fluid rounded" src="{% static 'img/nappier.jpeg' %}">
+                            <img class="img-fluid rounded" src="{% static 'img/german.jpeg' %}">
                         </div>
                     </div>
                 </div>
@@ -66,7 +135,7 @@
                             <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
                                 <div class="text-center bg-primary py-5 px-4">
                                     <img class="img-fluid mb-4" src="img/experience.png" alt="">
-                                    <h1 class="display-6 text-white" data-toggle="counter-up">11</h1>
+                                    <h1 class="display-6 text-white" data-toggle="counter-up">7</h1>
                                     <span class="fs-5 fw-semi-bold text-secondary">Years Experience</span>
                                 </div>
                             </div>
