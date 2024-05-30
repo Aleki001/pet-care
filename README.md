@@ -1,6 +1,6 @@
-# Pet Adoption Web App
+# Pet Care Web App
 
-Welcome to the Pet Adoption Web App! This web application allows users to browse available pets for adoption, read blogs related to pet care and adoption, and view a gallery of pets. This README provides detailed instructions for setting up and running the application.
+Welcome to Pet Care! This web application allows users to browse available pets for adoption, read blogs related to pet care and adoption, and view a gallery of pets. This README provides detailed instructions for setting up and running the application.
 
 ## Table of Contents
 
@@ -122,4 +122,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-Thank you for using the Pet Adoption Web App! If you have any questions or issues, please feel free to contact us or open an issue on GitHub.
+Thank you for using the Pet Care! If you have any questions or issues, please feel free to contact us or open an issue on GitHub.
