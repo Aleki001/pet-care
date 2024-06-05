@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Post
 from .forms import PostForm
+from django.contrib import messages
 
 
 def kilimo_news(request):
@@ -20,6 +21,7 @@ def create_post(request):
         form = PostForm(request.POST)
         if form.is_valid():
             form.save()
+            messages.success(request, 'News added successfully.')
             return redirect('account')
     else:
         form = PostForm()

@@ -2,6 +2,7 @@
 
 {% block content %}
 <div class="container">
+    <a href="{% url 'pets' %}" class="btn btn-primary mb-3"><< Back</a>
     <h2>Adopt "{{ pet.name }}"</h2>
     <img src="{{ pet.photo.url }}" alt="{{ pet.name }}">
     <form method="post">
