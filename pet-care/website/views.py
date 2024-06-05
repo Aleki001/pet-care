@@ -5,7 +5,7 @@ from django.core.exceptions import ValidationError
 from django.contrib import messages
 from django.core.mail import send_mail
 from .forms import ContactForm
-from .models import Image
+from .models import Image, SubscribedUsers
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import PasswordChangeForm
@@ -153,4 +153,9 @@ def delete_picture_from_gallery(request, pk):
     pic = get_object_or_404(Image, pk=pk)
     pic.delete()
     return redirect('gallery')
+
+
+def all_subscribers(request):
+    subscribers = SubscribedUsers.objects.all()
+    return render(request, "website/subscribed.html", {'subscribers': subscribers})
 
